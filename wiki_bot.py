@@ -20,11 +20,7 @@ async def send_welcome(message: Message):
 @dp.message_handler()
 
 async def surov(message: Message):
-    print(message.text)
-    javob = input("javob kiriting: ")
-    await message.answer(javob)
-
-
+ 
     try:
         import wikipedia
         wikipedia.set_lang("uz")
@@ -33,7 +29,7 @@ async def surov(message: Message):
 
     except:
         await message.answer("Kechirasiz bunday natijani topa olmadik !")
-#
+        
 
 if __name__ == '__main__':
     executor.start_polling(dp,skip_updates=True)
